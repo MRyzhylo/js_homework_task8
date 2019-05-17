@@ -59,3 +59,58 @@ ul {
     display: block;
     margin: 2px;
 }
+
+#adaptive_menu {
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid orangered;
+    margin-bottom: 2px;
+}
+
+.adchange_button {
+    width: 200px;
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid blueviolet;
+    background: rgb(191, 124, 253);
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+#admenu_block {
+    left: 0;
+    border: 2px solid orangered;
+}
+
+.adwrap_block {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adwrap_block .adwrap {
+    width: 300px;
+    display: block;
+    padding: 10px 15px;
+    margin: 1px;
+    background: orange;
+    border: 1px solid rgb(255, 68, 0);
+    text-align: center;
+}
+
+.adstyle_block {
+    display: flex;
+}
+
+.adsmall_wrap {
+    display: block;
+    padding: 5px 10px;
+    margin: 1px;
+    background: orange;
+    border: 1px solid rgb(255, 68, 0);
+}
+
