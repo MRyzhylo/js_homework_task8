@@ -80,6 +80,7 @@ ul {
 }
 
 #admenu_block {
+    max-width: 560px;
     left: 0;
     border: 2px solid orangered;
     display: flex;

@@ -179,10 +179,8 @@ function AdaptiveBurger (data, dataDop, nameId) {
     this.button2.onclick = this.changeAddItems;
 }
 
-let winInMid = window.innerWidth
-
 function screenResolutionCheck (winInMid) {
-    if (winInMid > 560) {
+    if (window.innerWidth > 560) {
         new Burger(menuArr, dopMenu, '#menu_block');
     } else {
         new AdaptiveBurger (menuArr, dopMenu, '#menu_block')
