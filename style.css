@@ -82,6 +82,17 @@ ul {
 #admenu_block {
     left: 0;
     border: 2px solid orangered;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adhover_button {
+    display: none;
+    background: violet;
+    border: 1px solid rgb(182, 1, 182);
+    border-radius: 10px;
+    margin: 2px;
 }
 
 .adwrap_block {
@@ -107,6 +118,7 @@ ul {
 }
 
 .adsmall_wrap {
+    max-width: 50px;
     display: block;
     padding: 5px 10px;
     margin: 1px;
@@ -114,3 +126,28 @@ ul {
     border: 1px solid rgb(255, 68, 0);
 }
 
+.advertical_block {
+    padding: 0;   
+}
+
+.advertical_block .adwrap {
+    width: 220px;
+    display: block;
+    padding: 5px 10px;
+    margin: 2px;
+    background: orange;
+    border: 1px solid rgb(255, 68, 0);
+}
+
+.adhorizontal_block {
+    padding: 0;  
+}
+
+.adhorizontal_block .adwrap {
+    width: 220px;
+    display: block;
+    padding: 5px 10px;
+    margin: 2px;
+    background: orange;
+    border: 1px solid rgb(255, 68, 0);
+}

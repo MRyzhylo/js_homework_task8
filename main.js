@@ -88,9 +88,12 @@ function AdaptiveBurger (data, dataDop, nameId) {
     this.button2 = document.createElement('button');
     this.button2.innerHTML = 'Change additional items';
     this.button2.className = 'adchange_button'
+    this.button3 = document.createElement('button');
+    this.button3.className = 'adhover_button'
     this.container2.appendChild(this.button);
     this.container2.appendChild(this.button2);
     this.div.appendChild(this.ul);
+    this.div.appendChild(this.button3);
     this.container.appendChild(this.div);
     this.ul.className = 'adwrap_block';
     this.data = data;
@@ -132,12 +135,37 @@ function AdaptiveBurger (data, dataDop, nameId) {
     this.ul.onclick = this.menuList;
 
     this.changePosition = function () {
+        let button = document.querySelector('.adhover_button');
+                
         if (this.ul.classList.contains('adwrap_block')) {
             this.ul.className = 'advertical_block';
+            button.style.display = 'block';
+            button.style.height = '170px';
+            button.style.width = '10px';
+            document.querySelector('.advertical_block').style.display = 'none';
+            document.querySelector('#admenu_block').style.flexDirection = 'row';
+        } else if (this.ul.classList.contains('advertical_block')) {
+            this.ul.className = 'adhorizontal_block';
+            button.style.display = 'block';
+            button.style.height = '15px';
+            button.style.width = '170px';
+            document.querySelector('.adhorizontal_block').style.display = 'none';
+            document.querySelector('#admenu_block').style.flexDirection = 'column';
         } else {
             this.ul.className = 'adwrap_block';
+            button.style.display = 'none';
+            document.querySelector('.adwrap_block').style.display = 'flex';
         }
     }.bind(this)
+
+    this.slideMenu = function () {
+        if (this.ul.classList.contains('advertical_block')) {
+        document.querySelector('.advertical_block').style.display = 'block';
+    } else {
+        document.querySelector('.adhorizontal_block').style.display = 'block';
+    }
+    }.bind(this)
+    this.button3.onclick = this.slideMenu;
 
     this.changeAddItems = function () {
         if (this.styleDiv.classList.contains('adstyle_block')) {
